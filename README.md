@@ -6,4 +6,4 @@
 
 ### The EventRegistration.py class contains the functions necessary to ensure that all registered people will be stored in a Contacts list.
 
-### The Test.py file contains the tests to ensure the main function to match the registered people to the contacts list. Here is where the matching function and overall goal of the Test Task can be demonstrated.
+### The Test.py file contains the tests to ensure the main function, matching the registered people to the contacts list, is working. Here is where the matching function and overall goal of the Test Task can be demonstrated.
