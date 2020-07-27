@@ -36,13 +36,6 @@ class TestEventRegistration(unittest.TestCase):
         new_reg.append(Registrants("Uma Thurman", "uma@thurs.com", None))
         for registrant in new_reg:
             event_reg.match_registrant(registrant)
-        names = []
-        emails = []
-        phones = []
-        for reg in event_reg.ContactsList:
-            names.append(reg.get_name())
-            emails.append(reg.get_email())
-            phones.append(reg.get_phone())
         self.assertEqual(event_reg.ContactsList[0].get_name(), "Alice Brown")
         self.assertEqual(event_reg.ContactsList[0].get_email(), None)
         self.assertEqual(event_reg.ContactsList[0].get_phone(), 1231112223)
@@ -64,6 +57,12 @@ class TestEventRegistration(unittest.TestCase):
         self.assertEqual(event_reg.ContactsList[6].get_name(), "Uma Thurman")
         self.assertEqual(event_reg.ContactsList[6].get_email(), "uma@thurs.com")
         self.assertEqual(event_reg.ContactsList[6].get_phone(), None)
+
+
+
+
+
+
 
 
     ### ADDITIONAL TESTS
