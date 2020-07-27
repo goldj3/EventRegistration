@@ -2,18 +2,22 @@ from Contacts import *
 from Leads import *
 from Registrants import *
 
+
+# A class to match Registrants into a Contact list.
+#       It contains the ContactsList and LeadsList as instance variables
+
 class EventRegistration():
 
     def __init__(self):
         self.ContactsList = []
         self.LeadsList = []
 
-# Follows steps mentioned in task description to add all registrants to the ContactList
-# First tries to match registrant's email to Contacts list
-# Then tries to match registrant's phone to Contacts list
-# Then tries to match email with Leads list
-# Then tries to match phone with Leads list
-# If registrant's information is not in neither Contacts list or Leads list, creates a new contact for the registrant
+    # Follows steps mentioned in task description to add all registrants to the ContactList
+    # First tries to match registrant's email to Contacts list
+    # Then tries to match registrant's phone to Contacts list
+    # Then tries to match email with Leads list
+    # Then tries to match phone with Leads list
+    # If registrant's information is not in neither Contacts list or Leads list, creates a new contact for the registrant
 
     def match_registrant(self, in_registrant):
         match_found = False
@@ -67,6 +71,7 @@ class EventRegistration():
         newcontact = Leads(name, email, phone)
         self.LeadsList.append(newcontact)
 
+    # helper method to remove an outdated contact and to update it with new information
     def updateContact(self, i, name, email, phone):
         self.ContactsList.pop(i)
         self.addContact(name, email, phone)
